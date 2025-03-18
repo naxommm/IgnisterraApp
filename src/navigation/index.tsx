@@ -21,8 +21,12 @@ function ContainerRoutes() {
           options={{ title: "" }}
           name="Home"
           component={Home}
+          initialParams={{ comments:'' }}
         />
-        <Stack.Screen name="Debug" component={Debug} />
+        <Stack.Screen 
+        initialParams={{ name:'' }} 
+        name="Debug" 
+        component={Debug}/>
         <Stack.Screen name="Login" component={LoginForm} />
       </Stack.Navigator>
     </NavigationContainer>

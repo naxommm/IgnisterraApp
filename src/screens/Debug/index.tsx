@@ -1,13 +1,28 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Debug({route, navigation}) {
-  const { name } = route.params;
 
-  console.info("name Debug :", name);
+
+function Debug({navigation}) {
+  
+  const [comments, setComments] = useState('');
+
+  
 
   return (
     <View>
-      <Text>Debug</Text>
+      <Text>Pestaña de debug </Text>
+
+        {/* Text input que lo que se ingrese se guarde en el estado "comments" (ademas los botones funcionan con el "evt") */}
+        <TextInput placeholder="" style={{backgroundColor: "#fff",
+          width: '50%', alignSelf: 'center', marginTop: 20, padding: 10}}
+        value={comments} onChangeText={(evt) => setComments(evt)}/>
+
+        <TouchableOpacity style={{ backgroundColor: "red" }} onPress={() => navigation.navigate(
+          { name: "Home", params: { comments } })}>
+            <Text>Enviar comentarios</Text>
+        </TouchableOpacity>
 
         {/* Boton para ir hacia a la pantalla anterior "navigation.goBack" */}
         <TouchableOpacity onPress={() => navigation.goBack()}>

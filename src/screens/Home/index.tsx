@@ -5,7 +5,11 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const LoginForm = ({ navigation }) => {
+const LoginForm = ({route, navigation }) => {
+  const { comments } = route.params;
+
+  console.info('comentario del textinput => : ', comments);
+
   return (
     <Container>
       <Row className="justify-content-md-center">
@@ -19,19 +23,17 @@ const LoginForm = ({ navigation }) => {
               <Form.Group className="inputContainer" controlId="formPassword">
                 <Form.Control type="password" placeholder="Password" className="inputField" />
               </Form.Group>
-              <Button onClick={() => navigation.navigate("Debug" ,{ name: "ola123" }) } id="button" >Submit</Button>
+              <Button onClick={() => navigation.navigate("Debug" ,{ name: "" }) } id="button" >Submit</Button>
               <div className="signupContainer">
                 <p>Don't have any account?</p>
-                <a href="#">dsadaddsd up</a>
+                <a href="#">sing up</a>
               </div>
             </Form>
           </StyledWrapper>
         </Col>
       </Row>
-      <TouchableOpacity onPress={() => navigation.navigate("Debug" ,{ name: "ola123" }) } >
-        <Text>Ir a Debug</Text>
-      </TouchableOpacity>
-    </Container>
+      </Container>
+      
   );
 }
 
