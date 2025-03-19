@@ -34,8 +34,11 @@ const LoginForm = ({route, navigation }) => {
       </Row>
       </Container>
       
+
   );
 }
+
+
 
 
 const StyledWrapper = styled.div`

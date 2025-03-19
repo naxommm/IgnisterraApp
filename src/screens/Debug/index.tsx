@@ -9,10 +9,10 @@ function Debug({navigation}) {
   const [comments, setComments] = useState('');
 
   
-
+  //lista de "botones" en el apartado debug
   return (
-    <View>
-      <Text>Pestaña de debug </Text>
+    <View> 
+      <Text>Pestaña de debug</Text>
 
         {/* Text input que lo que se ingrese se guarde en el estado "comments" (ademas los botones funcionan con el "evt") */}
         <TextInput placeholder="" style={{backgroundColor: "#fff",
@@ -38,6 +38,10 @@ function Debug({navigation}) {
         <TouchableOpacity style={{ backgroundColor: "cyan" }}  onPress={() => navigation.popToTop()}>
             <Text>Volver al principio</Text>
         </TouchableOpacity>
+
+          <TouchableOpacity style={{ backgroundColor: "gray"}} onPress={() => navigation.navigate("Inicio") }>
+            <Text>Ir a inicio(campo de pruebas)</Text>
+          </TouchableOpacity>
 
     </View>
   );

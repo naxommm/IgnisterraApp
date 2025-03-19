@@ -8,26 +8,30 @@ import { View, Text, TouchableOpacity } from "react-native";
 import Home from "../screens/Home";
 import LoginForm from "../screens/Home";
 import Debug from "../screens/Debug";
+import Inicio from "../screens/Debug/test/inicio";
 /* import LoginForm from "../Login";  */
 
 
 const Stack = createNativeStackNavigator();
 
+//Rutas 
 function ContainerRoutes() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
-          options={{ title: "" }}
-          name="Home"
-          component={Home}
-          initialParams={{ comments:'' }}
+          options={{ title: "" }} name="Home"
+          component={Home} initialParams={{ comments:'' }}
         />
         <Stack.Screen 
-        initialParams={{ name:'' }} 
-        name="Debug" 
+        initialParams={{ name:'' }} name="Debug" 
         component={Debug}/>
-        <Stack.Screen name="Login" component={LoginForm} />
+
+        <Stack.Screen name="Login" component={LoginForm} 
+        />
+
+        <Stack.Screen name="Inicio" component={Inicio}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
