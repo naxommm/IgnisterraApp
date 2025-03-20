@@ -9,6 +9,7 @@ import Home from "../screens/Home";
 import LoginForm from "../screens/Home";
 import Debug from "../screens/Debug";
 import Inicio from "../screens/Debug/test/inicio";
+import Formulario from "../screens/Debug/test/Formulario";
 /* import LoginForm from "../Login";  */
 
 
@@ -21,7 +22,7 @@ function ContainerRoutes() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           options={{ title: "" }} name="Home"
-          component={Home} initialParams={{ comments:'' }}
+          component={Home} 
         />
         <Stack.Screen 
         initialParams={{ name:'' }} name="Debug" 
@@ -30,7 +31,10 @@ function ContainerRoutes() {
         <Stack.Screen name="Login" component={LoginForm} 
         />
 
-        <Stack.Screen name="Inicio" component={Inicio}
+        <Stack.Screen options={{ title: "" }} name="Inicio" component={Inicio}
+        />
+
+        <Stack.Screen name="Formulario" component={Formulario} 
         />
       </Stack.Navigator>
     </NavigationContainer>

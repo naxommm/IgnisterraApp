@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const LoginForm = ({route, navigation }) => {
-  const { comments } = route.params;
-
-  console.info('comentario del textinput => : ', comments);
+  
+  //recibir lo que se ponga en el campo textinput de la siguiente ventana cuando se presiona el boton rojo
+  /* const { comments } = route.params; */
+  /* console.info('comentario del textinput => : ', comments); */
 
   return (
     <Container>

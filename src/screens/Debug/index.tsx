@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
-import 'bootstrap/dist/css/bootstrap.min.css';
+/* import 'bootstrap/dist/css/bootstrap.min.css'; */
 
 
 
@@ -9,7 +9,7 @@ function Debug({navigation}) {
   const [comments, setComments] = useState('');
 
   
-  //lista de "botones" en el apartado debug
+  //Apartado que lleva a todas las otras screens
   return (
     <View> 
       <Text>Pestaña de debug</Text>
@@ -41,6 +41,10 @@ function Debug({navigation}) {
 
           <TouchableOpacity style={{ backgroundColor: "gray"}} onPress={() => navigation.navigate("Inicio") }>
             <Text>Ir a inicio(campo de pruebas)</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate("Formulario") }>
+            <Text>Ir a forms test con formik</Text>
           </TouchableOpacity>
 
     </View>
