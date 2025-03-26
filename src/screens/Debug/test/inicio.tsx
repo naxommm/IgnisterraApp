@@ -12,7 +12,7 @@ const testIcons = (props) => {
   return <Icon name="done-all-outline" {...props} />;
 }
 
-function Inicio({ navigation }) {
+function Inicio({ navigation }) { //aaaa
 
   return (
     <>
