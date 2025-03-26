@@ -1,0 +1,39 @@
+const formik = useFormik({
+    initialValues: { 
+      name: '', 
+      password: '' 
+    },
+
+    
+    /* onSubmit: values => {
+      console.log(values); */
+
+
+
+return (
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 16 }}>
+        <Text category='h1'>Nombre</Text>
+        <Input
+          placeholder='Ingresa tu nombre '
+          value={formik.values.name}
+          onChangeText={formik.handleChange('name')}
+          onBlur={formik.handleBlur('name')}
+          style={{ marginBottom: 16 }}
+        />
+        <Text category='h1'>Contraseña</Text>
+        <Input
+          placeholder='Ingresa tu contraseña'
+          value={formik.values.password}
+          onChangeText={formik.handleChange('password')}
+          onBlur={formik.handleBlur('password')}
+          secureTextEntry
+          style={{ marginBottom: 16 }}
+        />
+        <Button onPress={formik.handleSubmit}>
+          Submit
+        </Button>
+      </Layout>
+    </ApplicationProvider>
+  );
+}
